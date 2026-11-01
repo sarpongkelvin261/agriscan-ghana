@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="goldGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="leafGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadowMask" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Full Bleed Background (NO border radius - required for maskable) -->
+  <rect width="512" height="512" fill="url(#bgGradMask)"/>
+  
+  <!-- Subtle decorative rings inside the safe zone (r=175 <= 204 safe zone) -->
+  <circle cx="256" cy="245" r="175" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.3"/>
+  <circle cx="256" cy="245" r="130" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.35"/>
+
+  <!-- Scanner corners located strictly inside safe zone -->
+  <path d="M 100 140 L 100 100 L 140 100" stroke="url(#goldGradMask)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 412 140 L 412 100 L 372 100" stroke="url(#goldGradMask)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 100 350 L 100 390 L 140 390" stroke="url(#goldGradMask)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 412 350 L 412 390 L 372 390" stroke="url(#goldGradMask)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Central Stylized Leaf (strictly within safe zone) -->
+  <g filter="url(#shadowMask)">
+    <path d="M 256 115 C 195 152 175 215 194 272 C 209 318 244 350 256 360 C 268 350 303 318 318 272 C 337 215 317 152 256 115 Z" 
+          fill="url(#leafGradMask)" opacity="0.95"/>
+    <path d="M 256 145 L 256 340" stroke="#064e3b" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M 256 190 Q 225 175 205 195" stroke="#064e3b" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M 256 205 Q 287 190 307 210" stroke="#064e3b" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M 256 245 Q 222 230 202 255" stroke="#064e3b" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M 256 260 Q 290 245 310 270" stroke="#064e3b" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- Emblem Badge for Initials -->
+  <rect x="106" y="215" width="300" height="84" rx="20" fill="#022c22" fill-opacity="0.92" stroke="url(#goldGradMask)" stroke-width="3" filter="url(#shadowMask)"/>
+
+  <!-- AGSG Initials Typography -->
+  <text x="256" y="276" 
+        text-anchor="middle" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="58" 
+        font-weight="900" 
+        letter-spacing="4" 
+        fill="#ffffff">
+    AGSG
+  </text>
+
+  <!-- Ghana Gold Star -->
+  <polygon points="256,212 259,219 267,219 261,224 263,232 256,227 249,232 251,224 245,219 253,219" fill="url(#goldGradMask)" filter="url(#shadowMask)"/>
+
+  <!-- Subtitle Tag: AGRISCAN GHANA -->
+  <g filter="url(#shadowMask)">
+    <rect x="156" y="318" width="200" height="26" rx="6" fill="#f59e0b"/>
+    <text x="256" y="335" 
+          text-anchor="middle" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="11" 
+          font-weight="800" 
+          letter-spacing="2.5" 
+          fill="#064e3b">
+      AGRISCAN GHANA
+    </text>
+  </g>
+</svg>

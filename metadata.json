@@ -1,0 +1,7 @@
+{
+  "name": "AgriScan Ghana - Crop Disease Detection",
+  "description": "Offline AI crop disease diagnosis and treatment recommendation system for smallholder farmers in Ghana (Maize, Cassava, Plantain, Yam, Cocoa, Oil Palm, Tomato, Pepper, Cowpea)",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
