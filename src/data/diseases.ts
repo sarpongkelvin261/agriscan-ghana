@@ -1187,7 +1187,7 @@ export const CROP_LABELS: Record<
     count: 4,
     scientific: 'Zea mays',
     category: 'Staples',
-    realImageUrl: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=400&q=80',
+    realImageUrl: '/crops/maize.jpg',
     localNames: {
       twi: 'Aburo',
       ga: 'Ablɛ',
@@ -1229,7 +1229,7 @@ export const CROP_LABELS: Record<
     count: 3,
     scientific: 'Dioscorea rotundata',
     category: 'Staples',
-    realImageUrl: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80',
+    realImageUrl: '/crops/yam.jpg',
     localNames: {
       twi: 'Bayerɛ',
       ga: 'Yele',
@@ -1257,7 +1257,7 @@ export const CROP_LABELS: Record<
     count: 2,
     scientific: 'Elaeis guineensis',
     category: 'Cash Crops',
-    realImageUrl: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=400&q=80',
+    realImageUrl: '/crops/oil_palm.jpg',
     localNames: {
       twi: 'Abɛ',
       ga: 'Ŋmɛtso',
@@ -1271,7 +1271,7 @@ export const CROP_LABELS: Record<
     count: 6,
     scientific: 'Solanum lycopersicum',
     category: 'Vegetables & Legumes',
-    realImageUrl: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=400&q=80',
+    realImageUrl: '/crops/tomato.jpg',
     localNames: {
       twi: 'Ntoosi',
       ga: 'Amɛdromi',
@@ -1285,7 +1285,7 @@ export const CROP_LABELS: Record<
     count: 3,
     scientific: 'Capsicum annuum',
     category: 'Vegetables & Legumes',
-    realImageUrl: 'https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=400&q=80',
+    realImageUrl: '/crops/pepper.jpg',
     localNames: {
       twi: 'Mako',
       ga: 'Sabiloo',

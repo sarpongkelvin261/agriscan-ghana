@@ -4,7 +4,7 @@
  * Pre-inference Out-of-Distribution (OOD) Gating & Foliage Segmentation:
  * Before passing an arbitrary camera frame or user-uploaded image to the
  * MobileNetV2 crop pathology classifier, this module evaluates whether the input
- * contains actual botanical plant or leaf tissue (Maize, Cassava, or Tomato).
+ * contains actual botanical plant or leaf tissue (Maize, Cassava, Plantain, Yam, Cocoa, Oil Palm, Tomato, Pepper, or Cowpea).
  * 
  * If non-plant content (e.g. human face, tractor, animal, concrete, room interior)
  * is detected, inference is halted and the user is prompted:
@@ -32,7 +32,7 @@ export async function validateIsPlantOrLeaf(imageUri: string): Promise<LeafValid
       foliagePercentage: 2,
       dominantColorType: 'non_botanical',
       reason: 'No plant or leaf tissue detected in image frame.',
-      recommendation: 'Please capture or upload a plant or leaf (Maize, Cassava, or Tomato) to proceed.'
+      recommendation: 'Please capture or upload a leaf from one of Ghana\'s 9 supported crops (Maize, Cassava, Plantain, Yam, Cocoa, Oil Palm, Tomato, Pepper, or Cowpea).'
     };
   }
 
@@ -203,7 +203,7 @@ export async function validateIsPlantOrLeaf(imageUri: string): Promise<LeafValid
             foliagePercentage,
             dominantColorType: 'non_botanical',
             reason: `No plant or leaf detected (${foliagePercentage}% plant tissue found). The image appears to be an object, person, or background.`,
-            recommendation: 'Please capture or upload a plant or leaf (Maize, Cassava, or Tomato) to proceed.'
+            recommendation: 'Please capture or upload a leaf from one of Ghana\'s 9 supported crops (Maize, Cassava, Plantain, Yam, Cocoa, Oil Palm, Tomato, Pepper, or Cowpea).'
           });
         }
       } catch (e) {

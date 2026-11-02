@@ -100,15 +100,19 @@ export const ClinicalCatalog: React.FC<ClinicalCatalogProps> = ({ onSelectSample
                   : 'bg-white border-stone-200 text-stone-700 hover:border-emerald-300 hover:bg-stone-50'
               }`}
             >
-              <div className="w-full h-14 rounded-xl overflow-hidden mb-1.5 bg-stone-100 border border-stone-200 relative">
+              <div className="w-full h-14 rounded-xl overflow-hidden mb-1.5 bg-emerald-950/20 border border-stone-200 relative flex items-center justify-center">
+                <span className="text-2xl select-none" aria-hidden="true">{info.icon}</span>
                 <img
                   src={info.realImageUrl}
                   alt={info.label}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
-                <span className="absolute bottom-1 right-1 text-[11px] bg-black/60 backdrop-blur-xs rounded px-1 text-white">
+                <span className="absolute bottom-1 right-1 text-[11px] bg-black/60 backdrop-blur-xs rounded px-1 text-white z-10">
                   {info.icon}
                 </span>
               </div>
@@ -169,12 +173,16 @@ export const ClinicalCatalog: React.FC<ClinicalCatalogProps> = ({ onSelectSample
                   {/* Card Header */}
                   <div className="flex items-start gap-3 mb-3">
                     <div className="w-14 h-16 rounded-xl bg-stone-100 overflow-hidden border border-stone-200 shrink-0 flex items-center justify-center relative">
+                      <span className="text-xl select-none" aria-hidden="true">{currentCropInfo?.icon || '🍃'}</span>
                       <img
                         src={sampleLeaf?.realImageUrl || sampleLeaf?.svgDataUri || currentCropInfo?.realImageUrl}
                         alt={disease.name}
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                         loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
                     </div>
                     <div className="flex-1 min-w-0">

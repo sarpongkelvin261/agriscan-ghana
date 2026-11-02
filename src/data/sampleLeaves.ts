@@ -185,7 +185,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'maize_blight',
     tag: 'Elongated Cigar Lesions',
     description: 'Long grayish-tan necrotic lesions typical of Helminthosporium infection on middle canopy maize in Ejura, Ashanti.',
-    realImageUrl: 'https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/maize.jpg',
     svgDataUri: createLeafSvg(
       '#eef4ee', '#40916c', '#74c69d',
       [
@@ -203,7 +203,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'maize_rust',
     tag: 'Golden Cinnamon Pustules',
     description: 'Abundant erupting powdery cinnamon-red pustules across both leaf blades, common during damp rainy season in Kwahu.',
-    realImageUrl: 'https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/maize.jpg',
     svgDataUri: createLeafSvg(
       '#fbf8ee', '#52b788', '#95d5b2',
       [
@@ -226,7 +226,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'maize_armyworm',
     tag: 'Ragged Windowpaning & Chewing',
     description: 'Severe caterpillar feeding with ragged perforations, skeletonized margins, and typical deadheart whorl destruction.',
-    realImageUrl: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/maize.jpg',
     svgDataUri: createLeafSvg(
       '#f5efe6', '#52b788', '#74c69d',
       [
@@ -246,7 +246,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'maize_healthy',
     tag: 'Normal Deep Green',
     description: 'Clean uniform emerald blade without chlorosis, spots, or pest damage. MoFA Omankwa certified seed stock.',
-    realImageUrl: 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/maize.jpg',
     svgDataUri: createLeafSvg(
       '#eef7ee', '#2d6a4f', '#52b788', [], 'maize'
     )
@@ -330,7 +330,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'tomato_early_blight',
     tag: 'Concentric Bullseye Rings',
     description: 'Dark brown concentric ring lesions with chlorotic yellow halo on mature tomato leaflet from Akomadan, Ashanti.',
-    realImageUrl: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/tomato.jpg',
     svgDataUri: createLeafSvg(
       '#faf5ef', '#40916c', '#74c69d',
       [
@@ -350,7 +350,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'tomato_late_blight',
     tag: 'Rapid Purplish-Brown Blighting',
     description: 'Large irregular greasy water-soaked lesions with white mold on underside, collected during cool August mist in Tuobodom.',
-    realImageUrl: 'https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/tomato.jpg',
     svgDataUri: createLeafSvg(
       '#f4f1ea', '#52b788', '#95d5b2',
       [
@@ -368,7 +368,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'tomato_tylcv',
     tag: 'Upward Cupping & Bright Chlorosis',
     description: 'Severe leaf margin curling and bright yellow interveinal chlorosis caused by Bemisia whiteflies in Ada irrigation zone.',
-    realImageUrl: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/tomato.jpg',
     svgDataUri: createLeafSvg(
       '#fffbeb', '#95d5b2', '#b7e4c7',
       [
@@ -386,7 +386,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'tomato_healthy',
     tag: 'Vibrant Crisp Foliage',
     description: 'Certified healthy tomato leaflet with rich foliage, distinct serration, and zero fungal or viral markings.',
-    realImageUrl: 'https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/tomato.jpg',
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#1b4332', '#40916c', [], 'tomato'
     )
@@ -483,7 +483,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'yam_anthracnose',
     tag: 'Black Pinpoint Spots & Halos',
     description: 'Severe foliar anthracnose with coalescing dark brown spots surrounded by bright yellow rings, causing vine scorching.',
-    realImageUrl: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/yam.jpg',
     svgDataUri: createLeafSvg(
       '#fffbeb', '#52b788', '#95d5b2',
       [
@@ -502,7 +502,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'yam_healthy',
     tag: 'Lush Heart-Shaped Vine',
     description: 'Healthy deep green climbing yam leaf with distinct palmate veins and robust photosynthesis.',
-    realImageUrl: 'https://images.unsplash.com/photo-1590005354167-6da97870c757?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/yam.jpg',
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#2d6a4f', '#74c69d', [], 'yam'
     )
@@ -516,7 +516,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'pepper_anthracnose',
     tag: 'Concentric Ring Lesions',
     description: 'Target-like circular necrotic lesions with dark rings and chlorotic yellowing on Scotch Bonnet pepper leaf.',
-    realImageUrl: 'https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/pepper.jpg',
     svgDataUri: createLeafSvg(
       '#fefce8', '#52b788', '#95d5b2',
       [
@@ -533,7 +533,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'pepper_healthy',
     tag: 'Smooth Vigorous Canopy',
     description: 'Glossy dark green ovate pepper leaf free of blemishes, supporting heavy blossom retention.',
-    realImageUrl: 'https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/pepper.jpg',
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#1b4332', '#40916c', [], 'pepper'
     )
@@ -547,7 +547,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'oilpalm_anthracnose',
     tag: 'Marginal Scorch & Spotting',
     description: 'Dark brown elongated lesions with chlorotic halos along the leaflet edges of a young nursery Tenera palm.',
-    realImageUrl: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/oil_palm.jpg',
     svgDataUri: createLeafSvg(
       '#fafaf9', '#52b788', '#95d5b2',
       [
@@ -564,7 +564,7 @@ export const SAMPLE_LEAVES: SampleLeaf[] = [
     diseaseId: 'oilpalm_healthy',
     tag: 'Clean Upright Frond',
     description: 'Vibrant, deep green linear leaflet with a strong midrib, unblemished by fungal spot or nutrient deficiency.',
-    realImageUrl: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80',
+    realImageUrl: '/crops/oil_palm.jpg',
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#1b4332', '#40916c', [], 'oil_palm'
     )
@@ -774,7 +774,7 @@ export const UNSUPPORTED_CROP_SAMPLES: UnsupportedCropSample[] = [
     botanicalName: 'Malus domestica',
     cropCategory: 'Temperate Fruit',
     description: 'Fine-toothed ovate apple foliage. Authentic botanical leaf, but outside AgriScan Ghana\'s 9 supported crops.',
-    realImageUrl: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=80',
+    
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#15803d', '#4ade80',
       [
@@ -790,7 +790,7 @@ export const UNSUPPORTED_CROP_SAMPLES: UnsupportedCropSample[] = [
     botanicalName: 'Brassica oleracea',
     cropCategory: 'Cruciferous Leaf',
     description: 'Large waxy cabbage leaf blade with thick white veins. Genuine agricultural plant, but not part of Ghana\'s 9 target crops.',
-    realImageUrl: 'https://images.unsplash.com/photo-1598030304671-5aa1d6f21128?auto=format&fit=crop&w=600&q=80',
+    
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#047857', '#6ee7b7',
       [
@@ -805,7 +805,7 @@ export const UNSUPPORTED_CROP_SAMPLES: UnsupportedCropSample[] = [
     botanicalName: 'Rosa spp.',
     cropCategory: 'Ornamental Shrub',
     description: 'Pinnately compound serrated rose foliage. Genuine botanical plant, but ornamental flower outside agricultural pathology.',
-    realImageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+    
     svgDataUri: createLeafSvg(
       '#f0fdf4', '#15803d', '#86efac',
       [

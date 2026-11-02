@@ -11,7 +11,21 @@ export default defineConfig(() => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: ['apple-touch-icon.png', 'icon.svg', 'pwa-192x192.png', 'pwa-512x512.png'],
+        includeAssets: [
+          'apple-touch-icon.png',
+          'icon.svg',
+          'pwa-192x192.png',
+          'pwa-512x512.png',
+          'crops/maize.jpg',
+          'crops/cassava.jpg',
+          'crops/plantain.jpg',
+          'crops/yam.jpg',
+          'crops/cocoa.jpg',
+          'crops/oil_palm.jpg',
+          'crops/tomato.jpg',
+          'crops/pepper.jpg',
+          'crops/cowpea.jpg'
+        ],
         manifest: {
           id: '/',
           name: 'AgriScan Ghana - Crop Disease Detection',
@@ -52,8 +66,22 @@ export default defineConfig(() => {
           categories: ['agriculture', 'productivity', 'utilities'],
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,jpg,jpeg,webp}'],
           runtimeCaching: [
+            {
+              urlPattern: /\/crops\/.*\.(?:jpg|jpeg|png|webp)$/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'crop-images-cache',
+                expiration: {
+                  maxEntries: 50,
+                  maxAgeSeconds: 60 * 60 * 24 * 90, // 90 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
             {
               urlPattern: /\/audio\/.*\.(?:wav|mp3)$/i,
               handler: 'CacheFirst',
@@ -106,7 +134,7 @@ export default defineConfig(() => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
       },
     },
     server: {

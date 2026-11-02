@@ -1246,19 +1246,22 @@ export const MobileSimulator: React.FC<MobileSimulatorProps> = ({
                                 : 'bg-white border-stone-200 text-stone-700 hover:border-emerald-300 hover:bg-stone-50'
                             }`}
                           >
-                            <div className="relative w-full h-14 rounded-lg overflow-hidden mb-1.5 bg-stone-100 border border-stone-200">
+                            <div className="relative w-full h-14 rounded-lg overflow-hidden mb-1.5 bg-emerald-950/20 border border-stone-200 flex items-center justify-center">
+                              <span className="text-2xl select-none" aria-hidden="true">{info.icon}</span>
                               <img
                                 src={info.realImageUrl}
                                 alt={info.label}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                                 loading="lazy"
-                                referrerPolicy="no-referrer"
+                                onError={(e) => {
+                                  e.currentTarget.style.display = 'none';
+                                }}
                               />
-                              <span className="absolute bottom-1 right-1 text-[11px] bg-black/60 backdrop-blur-xs rounded px-1 text-white">
+                              <span className="absolute bottom-1 right-1 text-[11px] bg-black/60 backdrop-blur-xs rounded px-1 text-white z-10">
                                 {info.icon}
                               </span>
                               {isSelected && (
-                                <span className="absolute top-1 left-1 w-2 h-2 rounded-full bg-emerald-500 border border-white" />
+                                <span className="absolute top-1 left-1 w-2 h-2 rounded-full bg-emerald-500 border border-white z-10" />
                               )}
                             </div>
                             <span className="text-[11px] font-bold block truncate text-stone-900 group-hover:text-emerald-800">
@@ -1353,7 +1356,11 @@ export const MobileSimulator: React.FC<MobileSimulatorProps> = ({
                                   alt={sample.name}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                                   loading="lazy"
-                                  referrerPolicy="no-referrer"
+                                  onError={(e) => {
+                                    if (sample.svgDataUri && e.currentTarget.src !== sample.svgDataUri) {
+                                      e.currentTarget.src = sample.svgDataUri;
+                                    }
+                                  }}
                                 />
                                 {sample.realImageUrl && (
                                   <span className="absolute bottom-0 inset-x-0 bg-stone-900/80 text-[7px] text-white text-center font-bold tracking-tight">
@@ -1395,7 +1402,11 @@ export const MobileSimulator: React.FC<MobileSimulatorProps> = ({
                                     alt={sample.name}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                                     loading="lazy"
-                                    referrerPolicy="no-referrer"
+                                    onError={(e) => {
+                                      if (sample.svgDataUri && e.currentTarget.src !== sample.svgDataUri) {
+                                        e.currentTarget.src = sample.svgDataUri;
+                                      }
+                                    }}
                                   />
                                   <span className="absolute bottom-0 inset-x-0 bg-emerald-800 text-[7px] text-white text-center font-bold tracking-tight">
                                     Healthy
